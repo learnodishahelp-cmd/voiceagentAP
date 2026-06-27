@@ -196,10 +196,10 @@ question:q
 
 
 
-const data =
-await response.json();
-console.log(data);
-
+const raw =
+await response.text();
+console.log("SERVER RESPONSE:",raw);
+const data = JSON.parse(raw);
 aiText =
 data.response;
 

@@ -177,7 +177,7 @@ document.getElementById("answer").innerHTML =
 "Thinking...";
 
 
-let response =
+const response =
 await fetch(webhookURL,{
 
 method:"POST",
@@ -196,9 +196,9 @@ question:q
 
 
 
-let data =
+const data =
 await response.json();
-
+console.log(data);
 
 aiText =
 data.response;
